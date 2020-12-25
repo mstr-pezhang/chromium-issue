@@ -25,6 +25,10 @@ test('Open example page', async () => {
 	await page.goto(exampleUrl, { waitUntil: 'networkidle0' });
 }, 30 * 1000);
 
+test('Wait for 10s', (done) => {
+	setTimeout(done, 10 * 1000);
+}, 15 * 1000);
+
 test('Take a screenshot', async () => {
 	const map = await page.$('#demo');
 	await map.screenshot({
@@ -37,6 +41,10 @@ test('Open example page', async () => {
 	page = await browser.newPage();
 	await page.goto(exampleUrl, { waitUntil: 'networkidle0' });
 }, 30 * 1000);
+
+test('Wait for 10s', (done) => {
+	setTimeout(done, 10 * 1000);
+}, 15 * 1000);
 
 test('Take a screenshot', async () => {
 	const map = await page.$('#demo');
