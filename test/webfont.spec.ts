@@ -1,5 +1,5 @@
-import * as puppeteer from 'puppeteer';
-import * as express from 'express';
+import puppeteer from 'puppeteer';
+import express from 'express';
 
 const app = express();
 app.use(express.static('static'));

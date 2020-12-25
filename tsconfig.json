@@ -3,7 +3,8 @@
 		"outDir": "dist",
 		"module": "CommonJS",
 		"moduleResolution": "node",
-		"target": "ES2019"
+		"target": "ES2019",
+		"esModuleInterop": true
 	},
 	"include": [
 		"test/**/*.ts"
