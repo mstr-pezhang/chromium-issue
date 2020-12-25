@@ -1,0 +1,34 @@
+{
+  "name": "test-puppeteer-webfont",
+  "version": "1.0.0",
+  "description": "Reproduce the timeout issue of loading webfonts",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "debug": "tsc --incremental --sourceMap",
+    "test": "node dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mstr-pezhang/test-puppeteer-webfont.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "webfont",
+    "timeout"
+  ],
+  "author": "Zhang, Peiliang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mstr-pezhang/test-puppeteer-webfont/issues"
+  },
+  "homepage": "https://github.com/mstr-pezhang/test-puppeteer-webfont#readme",
+  "dependencies": {
+    "puppeteer": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^12.19.11",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.1.3"
+  }
+}
