@@ -34,22 +34,13 @@ test('Enable request interception', async () => {
 	await page.setRequestInterception(true);
 
 	page.on('request', (req) => {
-		console.log(`Request: ${req.url()}`);
 		req.continue();
 	});
-
-	page.on('requestfailed', (req) => {
-		console.log(`Request Failed: ${req.url()}`);
-	});
-
-	page.on('requestfinished', (req) => {
-		console.log(`Request Finished: ${req.url()}`);
-	});
 });
 
-test('Wait for 4s', (done) => {
-	setTimeout(done, 4 * 1000);
-});
+test('Wait for 10s', (done) => {
+	setTimeout(done, 10 * 1000);
+}, 15 * 1000);
 
 test('Evalute font family', async () => {
 	const client = Reflect.get(page, '_client');
