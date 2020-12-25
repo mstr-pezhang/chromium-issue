@@ -1,7 +1,7 @@
 {
-  "name": "test-puppeteer-webfont",
+  "name": "puppeteer-issue",
   "version": "1.0.0",
-  "description": "Reproduce the timeout issue of loading webfonts",
+  "description": "Reproduce issues of puppeteer",
   "main": "dist/index.js",
   "scripts": {
     "build": "rimraf dist && tsc",
