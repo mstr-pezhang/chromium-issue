@@ -26,8 +26,8 @@ test('Open sample page', async () => {
 
 test('Enable DOM & CSS', async () => {
 	const client = Reflect.get(page, '_client');
-  await client.send('DOM.enable');
-  await client.send('CSS.enable');
+	await client.send('DOM.enable');
+	await client.send('CSS.enable');
 });
 
 test('Enable request interception', async () => {
@@ -44,8 +44,8 @@ test('Wait for 10s', (done) => {
 
 test('Evalute font family', async () => {
 	const client = Reflect.get(page, '_client');
-  const doc = await client.send('DOM.getDocument');
-  const node = await client.send('DOM.querySelector', { nodeId: doc.root.nodeId, selector: '.sample-text' });
+	const doc = await client.send('DOM.getDocument');
+	const node = await client.send('DOM.querySelector', { nodeId: doc.root.nodeId, selector: '.sample-text' });
 	const { fonts } = await client.send('CSS.getPlatformFontsForNode', { nodeId: node.nodeId });
 	const [font] = fonts;
 	expect(font.familyName).toBe('Open Sans SemiBold');
