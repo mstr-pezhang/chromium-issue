@@ -16,14 +16,6 @@ test('Open a new tab', async () => {
 	page = await browser.newPage();
 });
 
-test('Open sample page', async () => {
-	await page.setViewport({
-		width: 979,
-		height: 746,
-	});
-	await page.goto('http://localhost:3750');
-});
-
 test('Enable DOM & CSS', async () => {
 	const client = Reflect.get(page, '_client');
 	await client.send('DOM.enable');
@@ -36,6 +28,14 @@ test('Enable request interception', async () => {
 	page.on('request', (req) => {
 		req.continue();
 	});
+});
+
+test('Open sample page', async () => {
+	await page.setViewport({
+		width: 979,
+		height: 746,
+	});
+	await page.goto('http://localhost:3750');
 });
 
 test('Wait for 10s', (done) => {
