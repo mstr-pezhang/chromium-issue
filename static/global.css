@@ -3,3 +3,8 @@
 	font-weight: bold;
 	src: local('Open Sans SemiBold'), url('./fonts/OpenSans-SemiBold.woff2') format('woff2');
 }
+
+.sample-text {
+	font-family: 'Open Sans';
+	font-weight: bold;
+}
