@@ -42,7 +42,7 @@ test('Wait for 10s', (done) => {
 	setTimeout(done, 10 * 1000);
 }, 15 * 1000);
 
-test('Evalute font family', async () => {
+test('Evaluate font family', async () => {
 	const client = Reflect.get(page, '_client');
 	const doc = await client.send('DOM.getDocument');
 	const node = await client.send('DOM.querySelector', { nodeId: doc.root.nodeId, selector: '.sample-text' });
