@@ -30,7 +30,7 @@
     "pixelmatch": "^5.2.1",
     "pngjs": "^6.0.0",
     "promise.allsettled": "^1.0.4",
-    "puppeteer": "^5.5.0",
+    "puppeteer": "^7.1.0",
     "ts-jest": "^26.4.4",
     "web-streams-polyfill": "^3.0.2"
   },
@@ -41,7 +41,6 @@
     "@types/pdfjs-dist": "^2.1.7",
     "@types/pixelmatch": "^5.2.2",
     "@types/pngjs": "^3.4.2",
-    "@types/puppeteer": "^5.4.2",
     "@typescript-eslint/eslint-plugin": "^4.11.0",
     "@typescript-eslint/parser": "^4.11.0",
     "eslint": "^7.16.0",
