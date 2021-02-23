@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Test Trabsform 2D</title>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.kpicard {
+	height: 708px;
+	font-size: 92px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 38px;
+}
+
+.metric-name {
+	width: 80%;
+	height: 600px;
+	line-height: 600px;
+	position: absolute;
+	left: 50%;
+	top: 25%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.metric-value {
+	width: 80%;
+	height: 600px;
+	line-height: 600px;
+	position: absolute;
+	left: 50%;
+	top: 62%;
+	text-align: center;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+</style>
+</head>
+<body>
+	<div class="kpicard">
+		<div class="metric-name">Atlanta</div>
+		<div class="metric-value">$894,145</div>
+	</div>
+</body>
+</html>
