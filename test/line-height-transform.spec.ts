@@ -19,7 +19,7 @@ test('Open sample page', async () => {
 		width: 979,
 		height: 746,
 	});
-	await page.goto(path.join(process.cwd(), 'static/line-height-transform.html'));
+	await page.goto(`file:///${path.join(process.cwd(), 'static/line-height-transform.html')}`);
 });
 
 test('Print to PDF', async () => {
