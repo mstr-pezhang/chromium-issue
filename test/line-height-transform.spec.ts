@@ -38,8 +38,8 @@ test('Check texts', async () => {
 		url: encodeURI(path.join(process.cwd(), 'output/line-height-transform.pdf')),
 		disableFontFace: true,
 	}).promise;
-	const page = await pdf.getPage(1);
-	const textContent = await page.getTextContent();
+	const p = await pdf.getPage(1);
+	const textContent = await p.getTextContent();
 	const texts = textContent.items.map((item) => item.str);
 	expect(texts).toContain('Atlanta');
 	expect(texts).toContain('$894,145');

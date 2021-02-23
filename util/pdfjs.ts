@@ -1,4 +1,4 @@
-/* eslint-disable global-require, @typescript-eslint/no-var-requires */
+/* eslint-disable no-unused-vars, global-require, @typescript-eslint/no-var-requires */
 import pdfjs from 'pdfjs-dist';
 
 declare global {
