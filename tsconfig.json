@@ -3,7 +3,7 @@
 		"outDir": "dist",
 		"module": "CommonJS",
 		"moduleResolution": "node",
-		"target": "ES2019",
+		"target": "ES2018",
 		"esModuleInterop": true
 	},
 	"include": [
