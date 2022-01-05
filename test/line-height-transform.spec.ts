@@ -40,7 +40,7 @@ test('Check texts', async () => {
 	}).promise;
 	const p = await pdf.getPage(1);
 	const textContent = await p.getTextContent();
-	const texts = textContent.items.map((item) => item.str);
+	const texts = textContent.items.map((item) => Reflect.get(item, 'str'));
 	expect(texts).toContain('Atlanta');
 	expect(texts).toContain('$894,145');
 });
