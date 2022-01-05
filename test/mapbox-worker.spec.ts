@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer';
 import compare from '../util/compareImage';
 
-const exampleUrl = 'https://docs.mapbox.com/mapbox-gl-js/api/';
+const exampleUrl = 'https://docs.mapbox.com/mapbox-gl-js/example/simple-map/';
 const baselinePath = 'output/mapbox-worker-normal.png';
 const targetPath = 'output/mapbox-worker-request-interception.png';
 const diffPath = 'output/mapbox-worker-diff.png';
