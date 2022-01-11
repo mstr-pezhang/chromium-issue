@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Remove Iframe and exposed functions does not work.</title>
+</head>
+<body>
+	<iframe id="demo" src="table-row-height.html" width="963" height="687"></iframe>
+	<script>
+	function remove() {
+		const demo = document.getElementById('demo');
+		demo.remove();
+		test();
+	}
+	</script>
+</body>
+</html>
