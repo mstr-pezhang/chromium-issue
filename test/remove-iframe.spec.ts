@@ -3,7 +3,6 @@ import puppeteer from 'puppeteer';
 
 let browser: puppeteer.Browser;
 let page: puppeteer.Page;
-let count = 0;
 
 test('Launch Chrome', async () => {
 	browser = await puppeteer.launch();
@@ -15,7 +14,7 @@ test('Open a new tab', async () => {
 
 test('expose a function', async () => {
 	await page.exposeFunction('test', () => {
-		count++;
+		// do nothing
 	});
 });
 
@@ -35,6 +34,7 @@ test('Screenshot', async () => {
 
 test('remove <iframe> and call exposed function', async () => {
 	await page.evaluate(() => {
+		/* global window */
 		const remove = Reflect.get(window, 'remove');
 		remove();
 	});
