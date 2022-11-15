@@ -30,7 +30,7 @@
     "pixelmatch": "^5.2.1",
     "pngjs": "^6.0.0",
     "promise.allsettled": "^1.0.5",
-    "puppeteer": "^13.2.0",
+    "puppeteer": "^19.2.2",
     "ts-jest": "^29.0.3",
     "web-streams-polyfill": "^3.2.0"
   },
