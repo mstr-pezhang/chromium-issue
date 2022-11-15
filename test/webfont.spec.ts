@@ -17,7 +17,7 @@ test('Open a new tab', async () => {
 });
 
 test('Enable DOM & CSS', async () => {
-	const client = Reflect.get(page, '_client');
+	const client = Reflect.get(page, '_client').call(page);
 	await client.send('DOM.enable');
 	await client.send('CSS.enable');
 });
@@ -43,7 +43,7 @@ test('Wait for 10s', (done) => {
 }, 15 * 1000);
 
 test('Evaluate font family', async () => {
-	const client = Reflect.get(page, '_client');
+	const client = Reflect.get(page, '_client').call(page);
 	const doc = await client.send('DOM.getDocument');
 	const node = await client.send('DOM.querySelector', { nodeId: doc.root.nodeId, selector: '.sample-text' });
 	const { fonts } = await client.send('CSS.getPlatformFontsForNode', { nodeId: node.nodeId });
