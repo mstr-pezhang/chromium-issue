@@ -1,16 +1,18 @@
-import puppeteer from 'puppeteer';
+import { Browser, Page } from 'puppeteer';
 import compare from '../util/compareImage';
+
+import launchBrowser from '../util/launchBrowser';
 
 const exampleUrl = 'https://docs.mapbox.com/mapbox-gl-js/example/mapbox-gl-rtl-text/';
 const baselinePath = 'output/mapbox-rtltext-normal.png';
 const targetPath = 'output/mapbox-rtltext-request-interception.png';
 const diffPath = 'output/mapbox-rtltext-diff.png';
 
-let browser: puppeteer.Browser;
-let page: puppeteer.Page;
+let browser: Browser;
+let page: Page;
 
 test('Launch Chrome', async () => {
-	browser = await puppeteer.launch();
+	browser = await launchBrowser();
 });
 
 test('Open example page', async () => {

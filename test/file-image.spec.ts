@@ -1,15 +1,17 @@
-import puppeteer from 'puppeteer';
+import { Browser, HTTPRequest, Page } from 'puppeteer';
 import express from 'express';
+
+import launchBrowser from '../util/launchBrowser';
 
 const app = express();
 app.use(express.static('static'));
 const server = app.listen(3750);
 
-let browser: puppeteer.Browser;
-let page: puppeteer.Page;
+let browser: Browser;
+let page: Page;
 
 test('Launch Chrome', async () => {
-	browser = await puppeteer.launch({
+	browser = await launchBrowser({
 		args: [
 			'--disable-web-security',
 		],
@@ -23,7 +25,7 @@ test('Open a new tab', async () => {
 test('Open sample page', async () => {
 	await Promise.all([
 		new Promise<void>(((resolve, reject) => {
-			page.on('requestfailed', (req: puppeteer.HTTPRequest) => {
+			page.on('requestfailed', (req: HTTPRequest) => {
 				if (req.url() !== 'file:///Z:/BIN/x64/1.jpg') {
 					return;
 				}

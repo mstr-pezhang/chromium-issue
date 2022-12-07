@@ -1,13 +1,15 @@
 import path from 'path';
-import puppeteer from 'puppeteer';
+import { Browser, Page } from 'puppeteer';
+
+import launchBrowser from '../util/launchBrowser';
 
 import pdfjs from '../util/pdfjs';
 
-let browser: puppeteer.Browser;
-let page: puppeteer.Page;
+let browser: Browser;
+let page: Page;
 
 test('Launch Chrome', async () => {
-	browser = await puppeteer.launch();
+	browser = await launchBrowser();
 });
 
 test('Open a new tab', async () => {
